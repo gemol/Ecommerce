@@ -579,6 +579,7 @@
     <Compile Include="Apps\Ecommerce\ACL\SalesByShippingTypeACL.cs" />
     <Compile Include="Apps\Ecommerce\ACL\ShippingMethodACL.cs" />
     <Compile Include="Apps\Ecommerce\ACL\StockReportACL.cs" />
+    <Compile Include="Apps\Ecommerce\ACL\StripeSettingsACL.cs" />
     <Compile Include="Apps\Ecommerce\ACL\TaxRateACL.cs" />
     <Compile Include="Apps\Ecommerce\ACL\ToolsAndReportsACL.cs" />
     <Compile Include="Apps\Ecommerce\ACL\WarehouseACL.cs" />
@@ -588,6 +589,8 @@
     <Compile Include="Apps\Ecommerce\Areas\Admin\Bundles\EcommerceAdminStylesheetBundle.cs" />
     <Compile Include="Apps\Ecommerce\Areas\Admin\Controllers\ProductListController.cs" />
     <Compile Include="Apps\Ecommerce\Areas\Admin\Controllers\ProductListTemplateDataController.cs" />
+    <Compile Include="Apps\Ecommerce\Areas\Admin\Controllers\StripeSettingsController.cs" />
+    <Compile Include="Apps\Ecommerce\Areas\Admin\ModelBinders\StripeSettingsModelBinder.cs" />
     <Compile Include="Apps\Ecommerce\Bundles\CheckoutLibScriptBundle.cs" />
     <Compile Include="Apps\Ecommerce\Bundles\CheckoutStylesheetBundle.cs" />
     <Compile Include="Apps\Ecommerce\Bundles\EcommerceLibScriptBundle.cs" />
@@ -937,6 +940,7 @@
     <Compile Include="Apps\Ecommerce\Controllers\SetShippingDateController.cs" />
     <Compile Include="Apps\Ecommerce\Controllers\SetShippingDetailsController.cs" />
     <Compile Include="Apps\Ecommerce\Controllers\SetShippingMethodController.cs" />
+    <Compile Include="Apps\Ecommerce\Controllers\StripeController.cs" />
     <Compile Include="Apps\Ecommerce\Controllers\TermsAndConditionsController.cs" />
     <Compile Include="Apps\Ecommerce\Controllers\UserAccountAddressesController.cs" />
     <Compile Include="Apps\Ecommerce\Controllers\UserAccountChangePasswordController.cs" />
@@ -1386,6 +1390,11 @@
     <Compile Include="Apps\Ecommerce\Payment\SagePay\VspServerMode.cs" />
     <Compile Include="Apps\Ecommerce\Payment\Services\IPaymentMethodService.cs" />
     <Compile Include="Apps\Ecommerce\Payment\Services\PaymentMethodService.cs" />
+    <Compile Include="Apps\Ecommerce\Payment\Stripe\Models\StripePostInfo.cs" />
+    <Compile Include="Apps\Ecommerce\Payment\Stripe\Services\IStripePaymentService.cs" />
+    <Compile Include="Apps\Ecommerce\Payment\Stripe\Services\StripePaymentService.cs" />
+    <Compile Include="Apps\Ecommerce\Payment\Stripe\StripePaymentMethod.cs" />
+    <Compile Include="Apps\Ecommerce\Payment\Stripe\StripeSettings.cs" />
     <Compile Include="Apps\Ecommerce\Payment\WorldPay\Models\WorldPayPostInfo.cs" />
     <Compile Include="Apps\Ecommerce\Payment\WorldPay\Services\IWorldPayPaymentService.cs" />
     <Compile Include="Apps\Ecommerce\Payment\WorldPay\Services\WorldPayPaymentService.cs" />
@@ -4409,6 +4418,8 @@
     <Content Include="Areas\Admin\Views\Widget\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Widget\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Apps\Ecommerce\Views\Stripe\Form.cshtml" />
+    <Content Include="Apps\Ecommerce\Areas\Admin\Views\StripeSettings\Index.cshtml" />
     <None Include="Properties\PublishProfiles\new.pubxml" />
     <Content Include="Themes\Ecommerce\Apps\Core\Views\Shared\_TwoColumn.cshtml" />
     <Content Include="Themes\Ecommerce\Apps\Core\Views\Web.config" />

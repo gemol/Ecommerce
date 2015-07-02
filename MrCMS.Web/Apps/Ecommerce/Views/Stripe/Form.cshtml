@@ -1,0 +1,11 @@
+﻿@model MrCMS.Web.Apps.Ecommerce.Payment.Stripe.Models.StripePostInfo
+
+<form action="/charge" method="POST">
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="@Model.Key"
+            data-name="@Model.name"
+            data-description="@Model.description"
+            data-currency="@Model.currency"
+            data-amount="@Model.amount">
+    </script>
+</form>

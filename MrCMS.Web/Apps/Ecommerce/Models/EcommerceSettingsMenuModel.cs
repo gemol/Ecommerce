@@ -79,7 +79,9 @@ namespace MrCMS.Web.Apps.Ecommerce.Models
                     new ChildMenuItem("Charity Clear", _urlHelper.Action("Index", "CharityClearSettings"),
                         ACLOption.Create(new WorldPaySettingsACL(), WorldPaySettingsACL.View)),
                     new ChildMenuItem("Braintree", _urlHelper.Action("Index", "BraintreeSettings"),
-                        ACLOption.Create(new BraintreeSettingsACL(), BraintreeSettingsACL.View))
+                        ACLOption.Create(new BraintreeSettingsACL(), BraintreeSettingsACL.View)),
+                    new ChildMenuItem("Stripe", _urlHelper.Action("Index", "StripeSettings"),
+                        ACLOption.Create(new StripeSettingsACL(), StripeSettingsACL.View))
                 }));
                 subMenu.Add(new ChildMenuItem("Product Review Settings", "/Admin/Apps/Ecommerce/ProductReviewSettings/Edit",
                         ACLOption.Create(new ProductReviewSettingsAcl(), ProductReviewSettingsAcl.Edit)));
